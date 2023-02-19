@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from requests import request
+from requests import *
 from .models import *
 from django.views.generic import ListView
 # Create your views here.
