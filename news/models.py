@@ -28,7 +28,7 @@ class New(models.Model):
     title = models.CharField(max_length=200)
     summary = models.CharField(max_length=300)
     body = models.TextField()
-    image = models.ImageField(upload_to='images/', blank=True, null=True)
+    image = models.CharField(max_length=200, null=True)
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 

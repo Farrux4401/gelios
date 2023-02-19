@@ -9,7 +9,7 @@
         <img
           class="borderedbox inspace-10"
           style="width: 100%"
-          src="{{ news.image.url }}"
+          src="{{ news.image }}"
           alt=""
         />
       </div>
@@ -31,7 +31,7 @@
       {% for new in latest_news %}
       <li class="one_third">
         <article>
-          <a href="#"><img src="{{ new.image.url }}" alt="" /></a>
+          <a href="#"><img src="{{ new.image }}" alt="" /></a>
           <h6 class="heading">{{ new.title }}</h6>
           <ul class="nospace meta">
             <li>

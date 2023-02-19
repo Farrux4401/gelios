@@ -7,7 +7,7 @@
     <article class="group btmspace-80">
       {% for new in latest_new %}
       <div class="two_third first">
-        <img class="borderedbox inspace-10" src="{{ new.image.url }}" alt="" />
+        <img class="borderedbox inspace-10" src="{{ new.image }}" alt="" />
       </div>
       <div class="one_third">
         <h6 class="heading">{{ new.title }}</h6>
@@ -31,9 +31,7 @@
       {% for new in other_news %}
       <li class="one_third">
         <article>
-          <a href="#"
-            ><img src="{{ new.image.url }}" alt="{{ new.title }}"
-          /></a>
+          <a href="#"><img src="{{ new.image }}" alt="{{ new.title }}" /></a>
           <h6 class="heading">{{ new.title }}</h6>
           <ul class="nospace meta">
             <li>
