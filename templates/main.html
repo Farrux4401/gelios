@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+    <div class="bgded overlay light" style="background-image:url('images/demo/backgrounds/01.png');">
+       
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+               
+                <div id="logo" class="fl_left">
+                    <h1><a href="{% url 'home' %}">Gelios</a></h1>
+                </div>
+                <nav id="mainav" class="fl_right">          
+                    <ul class="clear">
+                        <li class="active"><a href="{% url 'home' %}">Bosh sahifa</a></li>
+                        <li><a class="drop" href="#">Kategoriyalar</a>
+                            <ul>
+                                {% for cat in categories %}
+                                <li><a href="/category/{{cat.id}}">{{ cat.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li><a class="drop" href="#">Regionlar</a>
+                            <ul>
+                                {% for reg in regions %}
+                                <li><a href="/region/{{reg.id}}">{{ reg.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            {% block content %}
+
+            {% endblock content %}
+
+
+            <!-- JAVASCRIPTS -->
+            <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/jquery.backtotop.js' %}"></script>
+            <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+            <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+</body>
+
+</html>
